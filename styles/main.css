@@ -1,24 +1,311 @@
+/* Webfonts start */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* Webfonts end */
+
+/* style all start */
+* {
+    box-sizing: border-box;
+  }
+
+/* style all end */
+
+/* body style start */
+
 body {
     background: grey;
     color: black;
+    font-family: 'Indie Flower', cursive;
 }
 
+/* body style end */
+
+/* background image start */
+#bg {
+    position: fixed; 
+    top: -30%; 
+    left: -30%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -1;
+  }
+  #bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
+/* background image end */
+
+/* header start */
 header {
     margin-left: 10%;
     margin-right: 10%;
-    width: 60%;
+    width: 40%;
+    height: 100px;
     margin: auto;
-    background: lightgrey;
-    text-align: center;
+    background-image: -webkit-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    background-image:    -moz-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    background-image:     -ms-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
     border: 2px black solid;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
+header h1 {
+	-webkit-box-reflect: below -3px -webkit-gradient(linear, left top, left bottom,  from(transparent), color-stop(7%, transparent), to(rgba(255, 255, 255, 0.2)));
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+/* header end */
+
+
+/* Navbar start */
 
 nav {
+    font-size: 22px;
     margin-left: 10%;
     margin-right: 10%;
-    width: 60%;
+    width: 50%;
     margin: auto;
     background: lightgrey;
     text-align: center;
     border: 2px black solid;
+    border-radius: 20px;
+}
+
+nav a{
+    font-size: 28px;
+    color: blue;
+}
+nav a:hover{
+    color: red;
+}
+
+/* Navbar end */
+
+
+/* main section start */
+.container {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+  }
+
+.floatleft {
+    width: 45%;
+    float: left;
+    min-width: 300px;
+    min-height: 200px;
+    border: 3px black solid;
+    border-radius: 50%;
+}
+
+.floatright {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    border: 3px black solid;
+    margin-left: 45px;
+    float: right;
+    min-height: 200px;
+    width: 45%;
+    color: black;
+    float: right;
+    overflow-wrap: break-word;
+    background-image: -webkit-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    background-image:    -moz-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    background-image:     -ms-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    box-shadow: rgba(255, 255, 255, 0.027) 5px 8px 27px 19px;
+    border-radius: 10%;
+}
+
+/* main section end */
+
+/* animations start */
+
+.animated {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.fadeInDown { 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+
+
+@-webkit-keyframes flip {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+    }
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+    }
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+}
+@keyframes flip {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+    }
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+    }
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+}
+.flip {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip
+}
+
+
+@-webkit-keyframes foolishIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(0, 0) rotate(360deg);
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 100%;
+        -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform-origin: 100% 100%;
+        -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform-origin: 0%;
+        -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 0%;
+        -webkit-transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1) rotate(0deg);
+    }
+}
+@keyframes foolishIn {
+    0% {
+        opacity: 0;
+        transform-origin: 50% 50%;
+        transform: scale(0, 0) rotate(360deg);
+    }
+    20% {
+        opacity: 1;
+        transform-origin: 0% 100%;
+        transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    40% {
+        opacity: 1;
+        transform-origin: 100% 100%;
+        transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    60% {
+        opacity: 1;
+        transform-origin: 0%;
+        transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    80% {
+        opacity: 1;
+        transform-origin: 0% 0%;
+        transform: scale(0.5, 0.5) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: scale(1, 1) rotate(0deg);
+    }
+}
+.foolishIn {
+    -webkit-animation-name: foolishIn;
+    animation-name: foolishIn;
 }
