@@ -47,20 +47,17 @@ body {
 header {
     margin-left: 10%;
     margin-right: 10%;
-    width: 40%;
     height: 100px;
     margin: auto;
-    background-image: -webkit-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    background-image: -webkit-linear-gradient(124deg, #264ea3 27%, #fafafa 54%);
     background-image:    -moz-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
     background-image:     -ms-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
-    border: 2px black solid;
-    margin-bottom: 10px;
-    border-radius: 20px;
 }
 header h1 {
 	-webkit-box-reflect: below -3px -webkit-gradient(linear, left top, left bottom,  from(transparent), color-stop(7%, transparent), to(rgba(255, 255, 255, 0.2)));
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    padding-top: 14px;
 }
 
 @media screen and (max-width: 900px) {
@@ -74,15 +71,13 @@ header h1 {
 /* Navbar start */
 
 nav {
+    border-top: 1px black solid;
     font-size: 22px;
     margin-left: 10%;
     margin-right: 10%;
-    width: 50%;
     margin: auto;
-    background: lightgrey;
+    background: rgb(255, 255, 255);
     text-align: center;
-    border: 2px black solid;
-    border-radius: 20px;
 }
 
 nav a{
@@ -141,14 +136,17 @@ nav a:hover{
     min-height: 200px;
     width: 60%;
     color: black;
+    font-weight: 700;
     float: right;
     overflow-wrap: break-word;
-    background-image: -webkit-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
+    background-image: -webkit-linear-gradient(124deg, #ababab 27%, #ebe8d3 54%);
     background-image:    -moz-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
     background-image:     -ms-linear-gradient(124deg, #ababab 27%, #fafafa 54%);
     box-shadow: rgba(255, 255, 255, 0.027) 5px 8px 27px 19px;
     border-radius: 10%;
 }
+
+/* Media queries for Float */
 
 @media screen and (max-width: 1100px) {
     .floatright{
@@ -170,7 +168,148 @@ nav a:hover{
     }
   }
 
+/* Media queries for Float End */
+
+/* clear Float */
+
+.clear {
+  clear:both;
+}
+
+/* clear Float End */
+
+/* Certificate Section */
+
+#certif{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: black;
+    font-size: 14px;
+    border: 8px 8px 0 8px black solid;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container2 {
+    position: relative;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#certif .container2 .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 3px grey solid;
+    margin-left:3px;
+}
+
+#certif .container2 .card:nth-child(even){
+    flex-direction: column-reverse;
+    background-color: black;
+    color: white;
+}
+
+#certif .container2 .card .imageBx{
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+#certif .container2 .card .imageBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    padding-left: 10px;
+}
+
+#certif .container2 .card .content {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#certif .container2 .card .content div{
+    padding: 20px;
+    text-align: center;
+}
+
+/* media responsive section for certificates */
+
+@media (max-width: 1040px) {
+    .container2 {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        margin: 50px;
+    }
+
+    #certif .container2 .card{
+        flex-direction: row;
+        margin: 10px 0;
+    }
+
+    #certif .container2 .card:nth-child(even){
+        flex-direction: row-reverse;
+        margin: 10px 0;
+    }
+
+    #certif .container2 .card .content {
+        width: 80%;
+    }
+
+    #certif .container2 .card .imageBx img{
+    padding-left: 10px;
+    }
+
+}
+
+
+@media (max-width: 540px) {
+    
+    #certif .container2 .card{
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+
+    
+#certif .container2 .card:nth-child(even){
+    flex-direction: column;
+}
+
+    #certif .card .imageBx,
+    #certif .card .content{
+        width: 50%;
+        padding-left: 40px;
+        font-size: 12px;
+    }
+
+    #certif .container2 .card .imageBx img{
+        width: 100%;
+        padding-left: 20px;
+        }
+
+    #certif .card .imageBx,
+    #certif .card .content{
+        width: 100%;
+    }
+}
+
+/* media responsive section for certificates End */
+
 /* main section end */
+
 
 /* animations start */
 
