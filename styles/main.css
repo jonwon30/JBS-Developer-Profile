@@ -112,8 +112,6 @@ nav a:hover{
 .floatleft {
     width: 45%;
     float: left;
-    min-width: 300px;
-    min-height: 200px;
     border: 3px black solid;
     border-radius: 50%;
 }
@@ -281,6 +279,11 @@ nav a:hover{
 
 @media (max-width: 540px) {
     
+    .container2 {
+    margin: 0px;
+    width: 100%;
+    }
+
     #certif .container2 .card{
         flex-direction: column;
         margin: 10px 0;
@@ -304,6 +307,15 @@ nav a:hover{
     #certif .card .imageBx,
     #certif .card .content{
         width: 100%;
+    }
+
+    .floatleft {
+        margin:0;
+        }
+
+    .floatright {
+    margin:0;
+    font-size: 7px;
     }
 }
 
