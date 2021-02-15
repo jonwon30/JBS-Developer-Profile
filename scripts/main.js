@@ -1,4 +1,3 @@
-console.log("testdsadasd")
 
 function fizzBuzz ( number )
 {
@@ -16,5 +15,4 @@ function fizzBuzz ( number )
         }
     }
 }
-
 fizzBuzz( 100 );
